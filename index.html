@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Today's Activities</h1>
+            <button onclick="window.location.href='add-task.html'">
+                <img src="image/plus.png" class="add-task-image">
+            </button>
+        </header>
+
+        <section class="task-filter">
+            <label for="filterDate">Filter by Date:</label>
+            <input type="date" id="filterDate">
+        </section>
+
+        <section class="task-categories">
+            <div class="task-column">
+                <h3>To Do</h3>
+                <ul id="todoList"></ul>
+            </div>
+            <div class="task-column">
+                <h3>In Progress</h3>
+                <ul id="inProgressList"></ul>
+            </div>
+            <div class="task-column">
+                <h3>Completed</h3>
+                <ul id="completedList"></ul>
+            </div>
+        </section>
+    </div>
+    
+    <div id="notification">
+        <span class="notification-icon">✔</span>
+        <span id="notification-message"></span>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

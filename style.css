@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    background: url('https://i.pinimg.com/736x/2c/d5/32/2cd532fa0ed39d30d99fdea93a713c3b.jpg') no-repeat center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(180deg, #be8abf, #ea9abb);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s ease-in-out;
+    color: #fff;
+}
+
+.container:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 8px 15px rgba(0, 0, 0, 0.1); 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 28px; 
+    color: #ffffff;
+    font-weight: 600;
+}
+
+button {
+    background: linear-gradient(45deg, #ea9abb, #fea5ad); 
+    color: white;
+    padding: 0px 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #fea5ad, #f8c3af);  
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.filter-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-container label {
+    font-weight: 500; 
+    margin-right: 10px;
+}
+
+.filter-container input {
+    padding: 7px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.task-column {
+    background: #edafc4; 
+    padding: 15px;
+    border-radius: 16px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+    color: #333333; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f5f5f5;
+    margin: 10px 0;
+    padding: 4px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s ease;
+}
+
+li:hover {
+    background: #e0e0e0;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.status-select {
+    padding: 5px;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+#notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #6c63ff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification-icon {
+    font-size: 18px;
+}
+
+.add-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.add-task-form input,
+.add-task-form select,
+.add-task-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #333; 
+}
+
+.add-task-form button {
+    background: linear-gradient(45deg, #be8abf, #ea9abb); 
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: background 0.3s, transform 0.3s;
+}
+
+.add-task-form button:hover {
+    background: linear-gradient(45deg, #ea9abb, #fea5ad); 
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.add-task-image {
+    width: 45px; 
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.add-task-image:hover {
+    transform: scale(1.1); 
+}
+A
+button img {
+    pointer-events: none;
+}
